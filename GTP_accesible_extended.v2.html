@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Quality-Oriented Teams: Leadership Lessons</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem; /* Uniformiza el tamaño base */
+
+        }
+
+        p,
+.text-content,
+.profile-details {
+    color: #222;
+}
+
+        .presentation-container {
+            max-width: 1200px;
+            width: 95%;
+            position: relative;
+        }
+
+        .slide {
+            width: 1280px;
+			height: 920px;
+			background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 60px;
+            margin: 10px auto;
+            min-height: 650px;
+            margin: 10px auto; /* Margen superior reducido para todas las slides */
+            display: none;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+    color: #2c3e50;
+    font-size: 1.7rem; /* Más grande */
+    margin-bottom: 14px;
+    text-align: center;
+    border-bottom: 4px solid #3498db;
+    padding-bottom: 10px;
+        }
+
+        h2 {
+    color: #34495e;
+    font-size: 1.6rem; /* Más grande */
+    margin-bottom: 25px;
+    text-align: center;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 10px;
+        }
+
+        .single-column {
+            display: block;
+            width: 100%;
+        }
+
+        .text-content {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .visual-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            border-radius: 10px;
+            padding: 10px;
+            min-height: 100px;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            font-size: 1.4rem; /* Aumenta el tamaño del texto de intereses y hobbies */
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 20px;
+        }
+
+        .profile-details {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            color: #333;
+        }
+
+        .profile-section {
+            margin-bottom: 34px;
+            font-size: 1.2rem; /* Aumenta el tamaño del texto de intereses y hobbies */
+
+        }
+
+        .profile-section h4 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .icon-group {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 10px;
+        }
+
+        .icon-diversity { background: #e74c3c; }
+        .icon-communication { background: #f39c12; }
+        .icon-leadership { background: #27ae60; }
+        .icon-learning { background: #9b59b6; }
+        .icon-success { background: #3498db; }
+        .icon-innovation { background: #e67e22; }
+        .icon-ai { background: #8e44ad; }
+
+        .challenge-list {
+            background: #fff5f5;
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .solution-list {
+            background: #f0fff4;
+            border-left: 5px solid #27ae60;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .learning-list {
+            background: #f8f9ff;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .future-list {
+            background: #fdf6e3;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .quote {
+            color: #111; /* antes #2c3e50 */
+            background: #fff; /* antes #ecf0f1 */
+            font-style: italic;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        .disco-quote {
+            font-style: italic;
+            font-size: 2rem;
+            text-align: center;
+            color: #f39c12;
+            margin: 30px 0;
+            padding: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
+        .timeline-year {
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .timeline-stories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.story-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.08);
+    text-align: center;
+    border-left: 5px solid #3498db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-card .timeline-year {
+    background: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.story-card h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.story-card p {
+    font-size: 1.15rem;
+    color: #34495e;
+}
+/* ...existing code... */
+@media (max-width: 900px) {
+    .timeline-stories {
+        grid-template-columns: 1fr;
+    }
+}
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .slide-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+.dot.active {
+    background: #3498db;
+    transform: scale(1.4);
+    border: 2px solid #222;
+}
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px 20px;
+                min-height: auto;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .content-grid, .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .text-content {
+                font-size: 1.3rem;
+            }
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .timeline {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .timeline-item:not(:last-child)::after {
+                content: '↓';
+                right: auto;
+                bottom: -15px;
+                top: auto;
+            }
+
+            .navigation {
+                bottom: 30px;
+                right: 50%;
+                transform: translateX(50%);
+                flex-direction: row;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .story-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+
+#slide2 .timeline-item:not(:last-child)::after {
+    display: none !important;
+}
+
+#slide3 .content-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+
+}
+
+#slide4 .content-grid {
+    grid-template-columns: 2fr 1fr; /* Solutions Implemented más ancha, Key Framework más angosta */
+    gap: 40px;
+}
+
+#slide4 .learning-list ul {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    column-gap: 30px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+#slide5 .content-grid {
+    grid-template-columns: 2fr 1fr; /* Haz la columna de retos más ancha y la de contexto más angosta */
+    gap: 40px;
+}
+
+#slide6 .content-grid {
+    grid-template-columns: 2fr 1fr; /* Haz la columna de soluciones más ancha y la de contexto más angosta */
+    gap: 40px;
+}
+
+#slide6 .learning-list ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 30px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+#slide7 .content-grid {
+    grid-template-columns: 2fr 1fr; /* Haz la columna de soluciones más ancha y la de contexto más angosta */
+    gap: 40px;
+}
+
+.nav-btn:focus, .dot:focus {
+    outline: 3px solid #f39c12;
+    outline-offset: 2px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+    </style>
+</head>
+<body>
+<div class="presentation-container" role="main">
+        <!-- Slide 1: Introduction -->
+<div class="slide active" id="slide1" role="region" aria-labelledby="slide1-title">
+    <div class="slide-number" aria-label="Slide 1 of 11">1/11</div>
+    <h1 id="slide1-title">Building Quality-Oriented Teams: Leadership Lessons</h1>
+            
+            <div class="intro-grid">
+                <div class="profile-card">
+                    <div class="profile-avatar" aria-label="Profile avatar">👩‍💼</div>
+                    <h3>Gladys Tapia</h3>
+                    <p><strong>Slovak & Chilean</strong></p>
+                    <p>2 continents, 5 languages</p>
+                    <p>Generation X • Female</p>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="profile-section">
+                        <h4 aria-label="Professional Background">🎯 Professional Background</h4>
+                        <p><strong>Education:</strong> Chemical Engineering, Environmental Sciences - Wastewater</p>
+                        <p><strong>Role:</strong> Tester, QA Coach, Team Leader</p>
+                        <div class="tags">
+                            <span class="tag">Telecommunication</span>
+                            <span class="tag">Automotive</span>
+                            <span class="tag">Travel</span>
+                            <span class="tag">Insurance</span>
+                            <span class="tag">Energy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4 aria-label="Testing Expertise">🔧 Testing Expertise</h4>
+                        <div class="tags">
+                            <span class="tag">Functional</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Integration</span>
+                            <span class="tag">UAT</span>
+                            <span class="tag">Regression</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4 aria-label="Interests and Hobbies">💫 Interests & Hobbies</h4>
+                        <p>Traveling • Violoncello • Boxing • Diversity • Learning • Volunteering at NTTDATA Foundation • Scratch programming with kids</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disco-quote">
+                My Quote: "I want to see you shine like a disco ball"
+            </div>
+        </div>
+
+        <!-- Slide 2: Journey Overview -->
+<div class="slide" id="slide2" role="region" aria-labelledby="slide2-title">
+    <div class="slide-number" aria-label="Slide 2 of 11">2/11</div>
+    <h2 id="slide2-title">My Leadership Journey: Three Stories</h2>
+   
+ 
+            
+<div class="timeline-stories">
+    <div class="story-card">
+        <div class="timeline-year">Story 1</div>
+        <h3>(2017) Diversity as Challenge and Strength</h3>
+        <p>First leadership role with a diverse team of 5 women from different countries</p>
+    </div>
+    <div class="story-card">
+        <div class="timeline-year">Story 2</div>
+        <h3>(2020) Adaptation and Resilience</h3>
+        <p>Leading a team of 7 young professionals through pandemic challenges</p>
+    </div>
+    <div class="story-card">
+        <div class="timeline-year">Story 3</div>
+        <h3>(2024) Innovation and Leadership in AI era</h3>
+        <p>Scaling to 35+ team members in the AI era while maintaining quality</p>
+    </div>
+</div>            
+            <div class="story-summary">
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>The importance to transform diversity challenges into team strengths</li>
+                    <li>Strategies for building resilience during uncertainty</li>
+                    <li>Ideas about scaling leadership in the age of AI</li>
+                    <li>Practical tips for quality-oriented team building</li>
+                    <li>Tips for building technical skills within your team</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 3: Story 1 - Challenge -->
+<div class="slide" id="slide3" role="region" aria-labelledby="slide3-title">
+    <div class="slide-number" aria-label="Slide 3 of 11">3/11</div>
+    <h2 id="slide3-title">Story 1: "My First Team" diversity as challenge and strength</h2>
+  
+    <div class="quote">
+                        "Five women from different countries - people who hadn't found their place in other teams"
+                    </div>
+
+            <div class="content-grid">
+                <div class="text-content">
+<div class="challenge-list">
+    <h3 style="color: #e74c3c; margin-bottom: 15px;">🚧 The Challenge</h3>
+    <ul>
+<li>
+    <strong>Language barriers:</strong> Communication was hindered by switching between English for work and Spanish as the vehicular language, each with its own cultural nuances.
+</li>
+<li>
+    <strong>Cultural differences:</strong> Diverse backgrounds resulted in different communication styles and expectations, often leading to misunderstandings or conflicts. For example, "Ahorita vengo" means different things to Latin Americans and Europeans.
+</li>
+<li>
+    <strong>Framework misalignment:</strong> The company operated under Agile, but my team was still using a waterfall approach, causing process friction.
+</li>
+<li>
+    <strong>Lack of standardized procedures:</strong> The absence of unified templates, mind maps or guides.
+</li>
+<li>
+    <strong>Team integration issues:</strong> members that hadn’t found their place in other teams, making it challenging to build trust and cohesion.
+</li>
+<li>
+    <strong>Different learning styles:</strong> individual needs that required extra flexibility and effort.
+</li>
+<li>
+    <strong>Continuous learning:</strong> professional growth was challenging due to varying levels of engagement with courses and learning platforms.
+</li>
+<li>
+    <strong>Empathetic leadership:</strong> creation of inclusive environment valuing diversity and each person’s unique role.
+</li>
+    </ul>
+</div>                    
+                </div>
+                
+                <div class="visual-content">
+                    <div class="icon-group">
+                        <div class="icon icon-diversity" aria-label="Diversity">🌍</div>
+                        <div class="icon icon-communication" aria-label="Communication">💬</div>
+                    </div>
+                    <p style="text-align: center; font-size: 1.3rem; color: #7f8c8d;">
+                        <strong>The Context:</strong><br>
+                        A team with untapped potential, <br>
+                        requiring adapted leadership approaches<br>
+                         to unlock their strengths.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Story 1 - Solution -->
+<div class="slide" id="slide4" role="region" aria-labelledby="slide4-title">
+    <div class="slide-number" aria-label="Slide 4 of 11">4/11</div>
+    <h2 id="slide4-title">Story 1: Solutions and Learnings</h2>
+
+    <div class="learning-list">
+                        <h3 style="color: #3498db; margin-bottom: 10px;" aria-label="My Continuous Learning">📚 My Continuous Learning path</h3>
+                        <ul>
+                            <li>Certified Agile Tester</li>
+                            <li>Learn integration testing strategies</li>
+                            <li>RST (Michael Bolton & James Bach)</li>
+                            <li>Ministry of Testing (Rosie Sherry)</li>
+                            <li>Test Automation University (Angie Jones)</li>
+                            <li>Mimo Platform</li>
+                            <li>Linkedin Learning</li>
+                            <li>Find me mentor</li>
+                            <li>Kibana - become user</li>
+                            <li>Management 3.0</li>
+                        </ul>
+                    </div>
+            
+            <div class="content-grid">
+                <div class="text-content">
+                    <div class="solution-list">
+                        <h3 style="color: #27ae60; margin-bottom: 15px;">✅ Solutions Implemented</h3>
+                        <ul>
+                            <li><strong>Visual communication:</strong> Sketch noting, whiteboard diagrams and Jira Dashboards to align the team</li>
+                            <li><strong>Standardized processes:</strong> Templates, mind maps, and structured procedures</li>
+                            <li><strong>Feedback spaces:</strong> Regular debate sessions and constructive dialogue</li>
+<li><strong>Peer review:</strong> The team used peer review to learn from each other and provide constructive feedback, helping to detect gaps in analysis or execution and continuously improve together.</li>                             
+<li><strong>Support network and Who is Who:</strong> Knowing the project structure and key stakeholders to collaborate effectively.</li>
+<li><strong>Individual growth:</strong> One-to-one sessions and 360 degrees feedback, along with group team-building activities, helped everyone understand that each person’s unique perspective contributes to the team’s and project’s success.</li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="visual-content">
+                    <div class="icon-group">
+                        <div class="icon icon-leadership" aria-label="Leadership">👥</div>
+                        <div class="icon icon-learning" aria-label="Learning">📖</div>
+                    </div>
+                    <p style="text-align: center; font-size: 1.1rem; color: #7f8c8d;">
+                        <strong>Tip:</strong><br>
+                        <span class="highlight">Hofstede's cultural dimensions</span> helped understand and leverage team differences effectively.
+                    </p>
+                      <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center;">
+       <strong>Outcome:</strong> The team became a key player in identifying software quality risks. Later, as a result of this experience, our activities were integrated within all squads across the company.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Story 2 - Pandemic Challenge -->
+    <div class="slide" id="slide5" role="region" aria-labelledby="slide5-title">
+    <div class="slide-number" aria-label="Slide 5 of 11">5/11</div>
+    <h2 id="slide5-title">Story 2: "Leading Through Pandemic Uncertainty" adaptation and resilience</h2>
+              
+            <div class="content-grid">
+                <div class="text-content">
+                    <div class="challenge-list">
+                        <h3 style="color: #e74c3c; margin-bottom: 15px;">🚧 The Challenge</h3>
+                        <ul>
+                            <li><strong>Generational gap:</strong> 7 young professionals, different generation than mine</li>
+                            <li><strong>Gender gap:</strong> I was the only woman in a team, a challenging fact to build rapport and ensure my perspective was heard and valued</li>
+                            <li><strong>Abrupt remote transition:</strong> 100% remote work during lockdown</li>
+                            <li><strong>Connection challenge:</strong> "How do you get known without being known?"</li>
+                            <li><strong>Impostor syndrome:</strong> Learning technical topics while connecting emotionally</li>
+                            <li><strong>Team instability:</strong> Member departures and remote onboarding</li>
+                            <li><strong>Meeting overload:</strong> Productivity affected by excessive virtual meetings</li>
+                            <li><strong>Communication tools and meeting rules:</strong> We had to adapt to new tools for written and spoken communication. The team agreed on meeting rules to ensure everyone could participate and have their voice heard during virtual meetings.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quote">
+                        "If I speak their language, I can understand them better. If I contribute ideas using their language, I'll be heard more attentively."
+                    </div>
+                </div>
+                
+                <div class="visual-content">
+                    <div class="icon-group">
+                        <div class="icon icon-communication" aria-label="Communication">🔗</div>
+                        <div class="icon icon-diversity" aria-label="Diversity">🌍</div>
+                    </div>
+                    <p style="text-align: center; font-size: 1.1rem; color: #7f8c8d;">
+                        <strong>Team Composition:</strong><br>
+                        QA Leads • Testers • Automation Engineers • Performance Testers • QA Coaches
+                    </p>
+                    <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin-top: 20px; text-align: center;">
+                        <strong>Key Realization:</strong> Building trust and belonging in a remote environment requires intentional effort
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Story 2 - Solutions -->
+ <div class="slide" id="slide6" role="region" aria-labelledby="slide6-title">
+    <div class="slide-number" aria-label="Slide 6 of 11">6/11</div>
+    <h2 id="slide6-title">Story 2: Solutions and Learnings</h2>
+            
+            <div class="content-grid">
+                <div class="text-content">
+                    <div class="solution-list">
+                        <h3 style="color: #27ae60; margin-bottom: 15px;">✅ Key Strategies</h3>
+                        <ul>
+                            <li><strong>Active observation and listening:</strong> Understanding team dynamics</li>
+                            <li><strong>Constructive difficult conversations:</strong> Maintaining open dialogue</li>
+                            <li><strong>Transparent communication:</strong> Keeping team informed and united</li>
+                            <li><strong>Productive meetings and self organization:</strong> Improving virtual meeting efficiency, pomodoro technique</li>
+                            <li><strong>Microsoft Teams mastery:</strong> Leveraging collaboration tools effectively</li>
+                            <li><strong>Team virtual meetings:</strong> Creating safe spaces for sharing concerns</li>
+                           </ul>
+                    </div>
+                
+                                        <div class="learning-list">
+<h3 style="color: #3498db; margin-bottom: 15px;" aria-label="My Continuous Learning path">📚 My Continuous Learning</h3>
+                        <ul>
+                            <li>Design thinking</li>
+                            <li>Mastering Postman</li>
+                            <li>Learning Dynatrace</li>
+                            <li>Mentoring others</li>
+                            <li>Performance testing</li>
+                            <li>Basic Security testing</li>
+                            <li>Scrum Master Certification</li>
+                            <li>Javascript coding for testers</li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+
+                <div class="visual-content">
+                    <div class="icon-group">
+                        <div class="icon icon-success" aria-label="Success">🏆</div>
+                        <div class="icon icon-leadership" aria-label="Leadership">🤝</div>
+                    </div>
+                    <div style="background: #e8f5e8; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #27ae60; margin-bottom: 10px;">Innovative Tools</h4>
+                        <ul style="font-size: 1rem;">
+                            <li><strong>"Thinking Sheet":</strong> Future challenge planning tool</li>
+                            <li><strong>Informal Roulette:</strong> Activity where members randomly answer a question. Fostering participation and engagement.</li>
+                            <li><strong>Team retrospectives:</strong> Regular sessions where the whole team reflects on what went well and what could be improved. Actions are assigned to team members and followed up in the next retrospective, creating a culture of continuous improvement.</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center;">
+                        <strong>Outcome:</strong> Strengthened team cohesion, resilience, and adaptability
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Slide 7: Story 3 - AI Era Challenge -->
+<div class="slide" id="slide7" role="region" aria-labelledby="slide7-title">
+    <div class="slide-number" aria-label="Slide 7 of 11">7/11</div>
+    <h2 id="slide7-title">Story 3: Innovation and Leadership in AI era</h2>
+    
+    <div class="content-grid">
+        <!-- Desafíos (Challenges) -->
+        <div class="text-content">
+            <div class="challenge-list">
+                <h3 style="color: #e74c3c; margin-bottom: 15px;">🚧 The Challenge</h3>
+                <div style="display: grid; grid-template-columns: 1fr;">
+<li><strong>Exponential growth:</strong> From 7 to 35+ members, 8 nationalities, Spain & North Africa. Spanish is main language, English in some teams.</li>
+<li><strong>Diverse backgrounds:</strong> Mix of profiles as seniors with broad experience, mediors and juniors in their first job.</li>
+<li><strong>Information flow:</strong> Important messages may not reach everyone, causing errors in our processes, delivery delays and misalignment.</li>
+<li><strong>Knowledge silos:</strong> Lack of collaboration between QA leads and analysts lead to isolated work and poor knowledge sharing across the team.</li>
+<li><strong>Belonging & visibility:</strong> Individual contributions can go unnoticed, affecting motivation and turnover.</li>
+<li><strong>Technical evolution:</strong> Fast AI and tech changes make it hard to keep skills up to date.</li>
+<li><strong>Service efficiency:</strong> Too many simultaneous activities can lead to overload, making it easy to miss opportunities for improvement.</li>
+                </div>
+            </div>
+        </div>
+        <!-- Visual y contexto -->
+        <div class="visual-content">
+            <div class="icon-group">
+                <div class="icon icon-communication" aria-label="Communication">🔗</div>
+                <div class="icon icon-learning" aria-label="Adaptation">🔄</div>
+            </div>
+            <p style="text-align: center; font-size: 1.1rem; color: #7f8c8d;">
+                <strong>Team Composition:</strong><br>
+                • QA Leads
+                • QA Analists  
+                • Testers 
+                • Automation Engineers 
+                • Performance Testers
+            </p>
+            <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin-top: 20px; text-align: left;">
+    <strong>Key Realization:</strong> <br>
+    • I could no longer reach all levels personally with just one pair of hands.<br>
+    • True impact comes from empowering others to carry the team vision.
+</div>
+
+        </div>
+    </div>
+<div class="quote">
+    "In an orchestra, cellos have a crucial impact—providing both melody and harmony, and offering a warm, solid foundation for the string section. Leadership means knowing when to support the harmony and when to let others shine."
+</div>
+</div>
+
+<!-- Slide 8: Story 3 - AI Solutions & Future (Parte 1) -->
+<div class="slide" id="slide8" role="region" aria-labelledby="slide8-title">
+    <div class="slide-number" aria-label="Slide 8 of 11">8/11</div>
+    <h2 id="slide8-title">Story 3: AI Solutions & Future</h2>
+
+    <div class="content-grid">
+        <div class="text-content">
+            <div class="solution-list">
+                <h3 style="color: #27ae60; margin-bottom: 15px;">✅ Key Actions Implemented</h3>
+                <ul>
+                    <li><strong>Support network:</strong> Identifying potential leaders</li>
+                    <li><strong>Support network:</strong> Responsibilities delegation</li>
+                    <li><strong>Learning spaces:</strong> Fostering Tools-Oriented Training: Building Technical Savvy</li>
+                    <li><strong>Knowledge baseline:</strong> Core courses for all team members</li>
+                    <li><strong>Business trainer:</strong> Business-focused learning activities</li>
+                    <li><strong>Team visibility:</strong> Team members bring their knowledge to the forefront</li>
+                    <li><strong>Gamified team building:</strong> Role-playing dynamics</li>
+                    <li><strong>In-person connections:</strong> Face-to-face team gatherings</li>
+                    <li><strong>API testing focus:</strong> Promoting backend and API testing as a core quality practice</li>
+                    <li><strong>Knowledge repository:</strong> Wiki with templates and guides</li>
+                    <li><strong>Communication monitoring:</strong> Chatbot for tracking message reach</li>
+                    <li><strong>AI in action:</strong> Empowering teams with AI agents for smarter daily work</li>
+                </ul>
+            </div>
+        </div>
+<div class="learning-list">
+    <h3 style="color: #3498db; margin-bottom: 15px;" aria-label="My Continuous Learning path">📚 My Continuous Learning path</h3>
+    <ul>
+        <li>Stepping back from the operational to focus on the strategic.</li>
+        <li>Master the art of observation</li>
+        <li>Learn to delegate effectively</li>
+        <li>Refined my ability to assess candidates holistically—balancing technical skills, mindset, and team alignment</li>
+        <li>AI as an efficiency tool while maintaining critical thinking</li>
+        <li>AI has become a gateway to deeper technical learning, reshaping how I approach growth. It shifted my mindset from passive absorption to active exploration—transforming curiosity into tangible capability.</li>
+    </ul>
+</div>
+    </div>
+</div>
+<!-- Slide 9: Story 3 - AI Tools & Impact -->
+<div class="slide" id="slide9" role="region" aria-labelledby="slide9-title">
+    <div class="slide-number" aria-label="Slide 9 of 11">9/11</div>
+    <h2 id="slide9-title">Story 3: AI Tools & Impact</h2>
+
+    <div style="width: 100%; max-width: 1500px; margin: 0 auto;">
+        <div class="icon-group" style="justify-content: center;">
+            <div class="icon icon-success" aria-label="Success">🏆</div>
+            <div class="icon icon-leadership" aria-label="Leadership">🤝</div>
+        </div>
+        <div style="background: #e8f5e8; padding: 30px; border-radius: 15px;">
+            <h4 style="color: #27ae60; margin-bottom: 15px; text-align: center;">Innovative Team Tools: for Learning</h4>
+            <ul style="font-size: 1.15rem; columns: 2; column-gap: 40px; max-width: 100%;">
+                <li><strong>"Bug Hunting":</strong>A dynamic session designed for hands-on exploratory testing, where learning happens through open conversations, group debates, and shared strategies. We challenge each other, exchange perspectives, and apply techniques in real time—always with a touch of gamification that keeps energy high and creativity flowing. These moments not only sharpen our testing skills, but also strengthen team cohesion and spark innovation.</li>
+                <li><strong>Postman Arenas:</strong> Collaborative sessions where team members explore and learn Postman together, tackling real-world challenges from daily team work—like modern gladiators of quality, we step into the arena to test, debate, and sharpen our skills through shared experience and technical mastery.</li>
+                <li><strong>APIs Ambassadors:</strong> Learning to test APIs has become a collective challenge embraced across all levels of the team. Some members have voluntarily stepped up as points of contact—sharing best practices, guiding hands-on learning, and fostering a culture of mutual support. This initiative reflects our commitment to grow together, turning complexity into opportunity through collaboration.</li>
+                <li><strong>ReadMe (Knowledge Repository):</strong> Centralized information hub accessible to all team members, providing useful resources, templates, and guides.</li>
+               <li><strong>Talent hunt:</strong>Driven by the automation team, this initiative was designed to democratize knowledge and support colleagues eager to dive into test automation. It began with an assessment phase to identify technical skill levels, learning needs, and motivation. Now, through structured mentoring and continuous feedback, participants are guided to grow their capabilities and become autonomous in handling frontend automation tasks. This collective journey is not only technical—it's empowering.</li>
+            </ul>
+        </div>
+  <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center;">
+    <strong style>Outcome:</strong> Enhanced innovation, cross-team collaboration, and a culture of continuous learning in a fast-changing AI environment.
+</div>    </div>
+</div>
+
+<!-- Slide 10: Story 3 - AI Tools & Impact -->
+<div class="slide" id="slide10" role="region" aria-labelledby="slide10-title">
+    <div class="slide-number" aria-label="Slide 10 of 11">10/11</div>
+    <h2 id="slide10-title">Story 3: AI Tools & Impact</h2>
+
+    <div style="width: 100%; max-width: 1500px; margin: 0 auto;">
+        <div class="icon-group" style="justify-content: center;">
+            <div class="icon icon-success" aria-label="Success">🏆</div>
+            <div class="icon icon-leadership" aria-label="Leadership">🤝</div>
+        </div>
+        <div style="background: #e8f5e8; padding: 30px; border-radius: 15px;">
+            <h4 style="color: #27ae60; margin-bottom: 15px; text-align: center;">Innovative Team Tools: Team building</h4>
+            <ul style="font-size: 1.15rem; columns: 2; column-gap: 40px; max-width: 100%;">
+                <li><strong>Team Building:</strong> We meet, we play, we grow—because team building should be unforgettable</li>
+                <li><strong>QA Time Capsule:</strong> Personal retrospective activity where each team member records a short video message to their future QA self, sharing hopes, lessons, or advice to revisit later.</li>
+                <li><strong>QA All Together:</strong> Bi-weekly meetings where the entire QA team gathers to share updates, discuss challenges, and strengthen collaboration across all projects.</li>
+                <li><strong>Friday Kudos:</strong> Weekly recognition moments to highlight and appreciate the value and contributions of team members.</li>
+                <li><strong>B-day greetings:</strong> When you have B-day we know and celebrate it.</li>
+                <li><strong>QA Memes:</strong> A fun section featuring the team’s most celebrated memes, bringing humor and energy to our daily work.</li>
+                <li><strong>Eva Chatbot:</strong> Initiative developed by team members to monitor communication and ensure important messages reach everyone.</li>
+                </ul>
+        </div>
+  <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center;">
+    <strong style>Outcome:</strong> Enhanced innovation, cross-team collaboration, and a culture of continuous learning in a fast-changing AI environment.
+</div>    </div>
+</div>
+
+<!-- Slide 11: Thank You & Questions -->
+<div class="slide" id="slide11" role="region" aria-labelledby="slide11-title">
+    <div class="slide-number" aria-label="Slide 11 of 11">11/11</div>
+    <h2 id="slide11-title">Thank You!</h2>
+    
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 70%;">
+        <div style="font-size: 13rem; margin-bottom: 20px;">🙏✨</div>
+        <h2 style="color: #3498db; margin-bottom: 20px;">Questions, comments, or feedback?</h2>
+        <p style="font-size: 1.6rem; color: #34495e; text-align: center; max-width: 600px;">
+            I appreciate your attention and participation.<br>
+            <br>
+            Feel free to ask anything, share your thoughts, or give feedback.<br>
+            Let's keep learning and growing together!
+        </p>
+    </div>
+</div>
+
+
+   <!-- Navegación -->
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)" disabled aria-label="Slide anterior">← Anterior</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)" aria-label="Siguiente slide">Siguiente →</button>
+    </div>
+
+    <!-- Indicadores de slide -->
+<div class="slide-indicator">
+    <span class="dot active" onclick="currentSlide(1)" aria-label="Ir al slide 1"><span class="sr-only">Slide 1</span></span>
+    <span class="dot" onclick="currentSlide(2)" aria-label="Ir al slide 2"><span class="sr-only">Slide 2</span></span>
+    <span class="dot" onclick="currentSlide(3)" aria-label="Ir al slide 3"><span class="sr-only">Slide 3</span></span>
+    <span class="dot" onclick="currentSlide(4)" aria-label="Ir al slide 4"><span class="sr-only">Slide 4</span></span>
+    <span class="dot" onclick="currentSlide(5)" aria-label="Ir al slide 5"><span class="sr-only">Slide 5</span></span>
+    <span class="dot" onclick="currentSlide(6)" aria-label="Ir al slide 6"><span class="sr-only">Slide 6</span></span>
+    <span class="dot" onclick="currentSlide(7)" aria-label="Ir al slide 7"><span class="sr-only">Slide 7</span></span>
+    <span class="dot" onclick="currentSlide(8)" aria-label="Ir al slide 8"><span class="sr-only">Slide 8</span></span>
+    <span class="dot" onclick="currentSlide(9)" aria-label="Ir al slide 9"><span class="sr-only">Slide 9</span></span>
+    <span class="dot" onclick="currentSlide(10)" aria-label="Ir al slide 10"><span class="sr-only">Slide 10</span></span>
+    <span class="dot" onclick="currentSlide(11)" aria-label="Ir al slide 11"><span class="sr-only">Slide 11</span></span>
+</div>
+
+    <script>
+        let currentSlideIndex = 1;
+        const totalSlides = 11;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (n > totalSlides) currentSlideIndex = 1;
+            if (n < 1) currentSlideIndex = totalSlides;
+            
+            // Ocultar todas las slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Mostrar slide actual
+            document.getElementById(`slide${currentSlideIndex}`).classList.add('active');
+            dots[currentSlideIndex - 1].classList.add('active');
+            
+            // Actualizar botones de navegación
+            document.getElementById('prevBtn').disabled = currentSlideIndex === 1;
+            document.getElementById('nextBtn').disabled = currentSlideIndex === totalSlides;
+            
+            // Actualizar texto del botón siguiente
+            const nextBtn = document.getElementById('nextBtn');
+            if (currentSlideIndex === totalSlides) {
+                nextBtn.textContent = 'Fin';
+                nextBtn.disabled = true;
+            } else {
+                nextBtn.textContent = 'Siguiente →';
+                nextBtn.disabled = false;
+            }
+        }
+
+        function changeSlide(n) {
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(n) {
+            currentSlideIndex = n;
+            showSlide(currentSlideIndex);
+        }
+
+        // Navegación por teclado para accesibilidad
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' && currentSlideIndex < totalSlides) {
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft' && currentSlideIndex > 1) {
+                changeSlide(-1);
+            }
+        });
+
+        // Inicializar
+        showSlide(currentSlideIndex);
+    </script>
+</body>
+</html>
